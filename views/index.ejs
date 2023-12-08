@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="css/style.css">
+
+<nav>
+
+<h1> Fantasy Land </h1>
+
+
+<h4> Login </h4>
+
+<form action="/" method="POST">
+  <input type="email" name="email" />
+  <input type="password" name="password" />
+  <button type="submit">login</button>
+</form>
+
+
+
+
+<h4> Faites votre recherche </h4>
+
+<form action="/" method="GET">
+    <input type="text" name="searchText" />
+    <button type="submit">Rechercher</button>
+  </form>
+
+
+ <% if (typeof message!=='undefined')console.log(message)  %>  
+ 
+
+  <% if (typeof message!='undefined') { %>
+
+    <div class="articlecontainer"> <%=email %><%=message %></div>
+
+    <% } %>
+
+
+  <% if (typeof searchText!='undefined') {let datas = dataset.filter(e => (e.title.toLowerCase()).includes(searchText.toLowerCase())); %>
+  
+      <p class="result"> <%=datas.length %> Result(s) for: "<%=searchText %>"</p>
+
+
+</nav>
+
+
+
+    <div class="articlecontainer">
+
+<% for (let data of datas) {%>
+
+        <div class="article">
+
+         <p> <img src="<%= data.image_src%> " alt=""></p>
+
+         <p> <%= data.title%> by <a href=#> <%= data.director%></a> </p>
+
+         </div>
+
+        <% }}%>
+
+    </div>
+
+    <nav class="adds">  <% if(typeof members !='undefined') {for(let member of members) {%>
+        
+        <p> <%= member%> "Your add here!"</p>
+    
+   <% }} %>
+
+</nav>

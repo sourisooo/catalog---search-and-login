@@ -1,0 +1,103 @@
+.articlecontainer {
+
+display: flex;
+flex-wrap: wrap;
+max-width: 100vw;
+justify-content: center;
+margin-top: 2vh;
+
+
+
+
+
+}
+
+img {
+
+max-width: 25vw;
+max-height: 50vh;
+
+
+}
+
+.article {
+
+    margin-left: 4vw;
+    margin-right: 4vw;
+    text-align: center;
+
+
+
+}
+
+h1 {
+
+    text-align: center;
+    background-color: blueviolet;
+
+
+}
+
+nav {
+
+    position: fixed;
+    top: 0;
+    max-width: 10vw;
+    text-align: center;
+    border: solid;
+    padding: 1em;
+    min-height: 95vh;
+   
+
+
+}
+
+button {
+
+    margin-top: 1em;
+    min-width: 5vw;
+    max-width: 5vw;
+    background-color: grey;
+
+
+}
+
+.adds{
+
+    position: fixed;
+    top: 0;
+    left: 87vw;
+    max-width: 10vw;
+    min-width: 10vw;
+    text-align: center;
+    border: solid;
+    padding: 1em;
+    min-height: 95vh;
+    background-color: blue;
+    color: aliceblue;
+
+
+
+}
+
+input {
+
+    margin-top: 1em;
+    border-radius: 5%;
+
+}
+
+.logincontainer {
+
+  
+    font-size: 1.8em;
+    margin-left: 33vw;
+    margin-right: 33vw;
+    margin-top: 40vh;
+    margin-bottom: 54vh;
+    min-width: 33 vw;
+    min-height:  20vh;
+
+
+
+}
