@@ -16,7 +16,7 @@ const indexcontroller ={
         const {searchText} = req.query;
 
 
-        res.render('index', {searchText,members,loginstate})
+        res.render('index', {searchText,members,loginstate,messages})
 
 
 
