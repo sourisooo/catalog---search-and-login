@@ -5,6 +5,10 @@
 <h1> Fantasy Land </h1>
 
 
+<% if (loginstate===false) {%>
+
+ <% console.log(loginstate, loginstate===false) %>
+
 <h4> Login </h4>
 
 <form action="/" method="POST">
@@ -13,14 +17,34 @@
   <button type="submit">login</button>
 </form>
 
+<% loginstate=true, console.log(loginstate,typeof email === "undefined")} else { %>
 
+<p> Welcome <% if (typeof email === "undefined") {} else {email} %> </p>
 
+<form action="/" method="POST">
+  <button type="submit">logout</button>
+</form>
+
+<% } %>
 
 <h4> Faites votre recherche </h4>
 
 <form action="/" method="GET">
     <input type="text" name="searchText" />
     <button type="submit">Rechercher</button>
+
+  </form>
+
+
+  <h4> ChatRoom </h4>
+
+<form action="/" method="POST">
+
+
+    <input type="text" name="message" required/>
+
+    <button type="submit">Envoyer</button>
+
   </form>
 
 
@@ -59,10 +83,25 @@
 
     </div>
 
-    <nav class="adds">  <% if(typeof members !='undefined') {for(let member of members) {%>
+    <nav class="adds">  
+
+
+         <% if((typeof members !='undefined')&&(members.slice(-2, -1).toString()!=members.slice(-1).toString()))  {%>
         
-        <p> <%= member%> "Your add here!"</p>
-    
-   <% }} %>
+    <p> <%= members.slice(-2, -1).toString()%> "has been deconnected"</p>
+
+    <p> <%= members.slice(-1).toString()%> "has been connected"</p>
+
+    <% } %>
+
+
+
+   <% if(typeof messages !='undefined') {for(let count =0; count < messages.length; count++) {%>
+        
+    <% console.log(members[count],messages[count],members,messages) %>
+
+    <p><%= members[count]%> says <%= messages[count] %> </p>
+
+<% }} %>
 
 </nav>
